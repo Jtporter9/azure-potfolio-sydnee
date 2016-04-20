@@ -1,0 +1,74 @@
+<div class="admin-header">
+  <h2>Sydnee's Admin view <i class="fa fa-lock"></i>
+</h2></div>
+<div class="admin-container">
+
+  <div><big>Headshot picture <i class="fa fa-picture-o"></i>
+</big></div>
+  <hr>
+  <div><span>Current headshot picture:</span></div>
+  <div><span>{{headShot.string}}</span></div>
+  <input style="width:70%;" placeholder="{{headShot.string}}" type="text">
+  <div class="intro-container">
+    <div><big>Intro</big></div>
+    <textarea>{{intro.string}}</textarea>
+
+    <div>
+      <big>My Work Section
+        <i class="fa fa-suitcase"></i>
+        <a ng-click="showAddProjBox()" href=""><i class="fa fa-plus"></i></a>
+        <a ng-click="showTrash()" href="">
+          <i class="fa fa-minus"></i>
+        </a>
+      </big>
+      <hr>
+    </div>
+
+    <div ng-repeat="proj in projects" class="projects">
+      <big>
+        <a ng-click="deleteProj($index)" ng-show="showTrashCan" href="">
+          <i class="fa fa-trash"></i> </a>
+          {{proj.number}}.
+      </big>
+      <input placeholder="{{proj.name}}" type="text">
+      <i class="fa fa-link"></i>
+      <input placeholder="{{proj.link}}" type="text">
+      <i class="fa fa-picture-o"></i>
+      <input placeholder="{{proj.picture}}" type="text">
+    </div>
+
+    <div ng-show="showAddProj" class="add-proj">
+      <h2>Add a project</h2>
+      <div>
+        <input ng-model="newProj.name" placeholder="new name..." type="text">
+      </div>
+      <div>
+        <input ng-model="newProj.link" placeholder="new video link..." type="text">
+      </div>
+      <div>
+        <input ng-model="newProj.picture" placeholder="new picture link..." type="text">
+      </div>
+      <div class="btns-holder">
+        <i ng-click="addNewProj()" class="fa fa-check"></i>
+        <i ng-click="showAddProjBox()" class="fa fa-close"></i>
+      </div>
+    </div>
+
+
+    <div>
+      <big>Bio section
+        <i class="fa fa-user"></i>
+      </big>
+    </div>
+    <hr>
+    <div><span>Current bio title:</span></div>
+    <div><span>{{bioTitle.string}}</span></div>
+    <input style="text-align:center;" placeholder="{{bioTitle.string}}" type="text">
+    <textarea>{{p1.string}}</textarea>
+    <textarea>{{p2.string}}</textarea>
+    <textarea>{{p3.string}}</textarea>
+    <textarea>{{p4.string}}</textarea>
+    <textarea>{{p5.string}}</textarea>
+  </div>
+  <big class="save"><a ng-click="saveChanges()" href="">Save changes <i class="fa fa-floppy-o"></i></a></big>
+</div>
