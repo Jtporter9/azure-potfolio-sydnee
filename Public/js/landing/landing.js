@@ -1,4 +1,14 @@
-angular.module('portfolio').controller('landingCtrl', function($scope, mainService) {
+angular.module('portfolio').controller('landingCtrl', function($scope, mainService, $location, $anchorScroll) {
+
+
+  $scope.pageJump = function(id) {
+        // set the location.hash to the id of
+        // the element you wish to scroll to.
+        $location.hash(id);
+
+        // call $anchorScroll()
+        $anchorScroll();
+      };
 
   $scope.headShot = mainService.headShot;
   $scope.intro = mainService.intro;

@@ -1,14 +1,15 @@
 <div class="page-wrap">
-    <div class="header">
-        <a class="header-a" href="#contact">Contact
+    <div id="top" class="header">
+        <a href="" ng-click="pageJump('contact')" class="header-a">Contact
         <i class="fa fa-phone"></i>
       </a>
-        <a class="header-a" href="#about">About
+        <a href="" ng-click="pageJump('aboutme')" class="header-a">About
         <i class="fa fa-user"></i>
       </a>
-        <a class="header-a" href="#myWork">Stories
+        <a href="" ng-click="pageJump('mywork')" class="header-a">Stories
         <i class="fa fa-television"></i>
       </a>
+
     </div>
     <div id="card1" class="card">
         <div class="center">
@@ -34,8 +35,10 @@
             </div>
         </div>
     </div>
-    <div name="myWork" id="card2" class="card">
+
+    <div id="card2" class="card">
         <div class="content intro">
+          <A id="mywork"></A>
             <h1>My Stories</h1>
             <hr>
             <div class="app-block center clickable">
@@ -60,7 +63,8 @@
             </div>
         </div>
     </div>
-    <div name="about" id="card3" class="card">
+
+    <div id="card3" class="card">
         <div class="content">
             <h1>{{bioTitle.string}} <i class="fa fa-newspaper-o"></i></h1>
             <hr>
@@ -71,11 +75,15 @@
                 <p><a class="blk" href="{{p2.link}}">{{p2.string}}</a></p>
                 <p><a class="blk" href="{{p3.link}}">{{p3.string}}</a></p>
                 <p><a class="blk" href="{{p4.link}}">{{p4.string}}</a></p>
+                <!-- For page jump -->
+                <A id="aboutme"></A>
                 <p><a class="blk" href="{{p5.link}}">{{p5.string}}</a></p>
             </div>
         </div>
     </div>
-    <div name="contact" id="card4" class="card">
+
+    <A id="contact"></A>
+    <div id="card4" class="card">
         <div class="content">
             <img class="contact-pic" src="{{headShot.string}}" style="width:15%;">
             <h1 style="margin:0 0 0 20%;">
@@ -90,6 +98,16 @@
                 <p class="p">Linkedin: <i class="fa fa-linkedin-square"></i>
                     <a class="blk" style="margin:0;" href="https://www.linkedin.com/in/sydneegunter">https://www.linkedin.com/in/sydneegunter</a></p>
                 <p class="signature p" style="text-align:left;">Thanks for stopping by...</p>
+                <br>
+                <div style="float:left;" >
+                  <a href="" ng-click="pageJump('top')">
+                    Go back to top
+                    <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <div style="margin:5px;font-size:12px;float:right;">
+                  <span>J. Tanner Porter Copyright (c) 2016 Copyright Holder All Rights Reserved.</span>
+                </div>
             </div>
         </div>
     </div>
