@@ -1,5 +1,11 @@
 angular.module('portfolio').controller('landingCtrl', function($scope, mainService, $location, $anchorScroll) {
 
+$scope.showMoreString = "Click to show more stories by me.";
+
+$scope.ToggleShowMore = function(){
+ $scope.showMoreStories = !$scope.showMoreStories;
+ $scope.showMoreString = "Click to show less";
+};
 
   $scope.pageJump = function(id) {
         // set the location.hash to the id of
