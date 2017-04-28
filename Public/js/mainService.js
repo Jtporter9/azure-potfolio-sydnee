@@ -6,7 +6,7 @@ angular.module('portfolio').service('mainService', function($http) {
   };
 
   this.intro = {
-    string: "I am a small town girl from Spanish Fork, Utah looking to make a difference. I am motivated by the change one person can make with just a little bit of courage. I am currently studying Broadcast Journalism at BYU and have the goal to become an international reporter. I served my mission in Paraguay and Argentina where I learned to speak Spanish fluently and developed a love for other cultures."
+    string: "People and their experiences inspire me. Each person has a story to tell and a voice to be heard. My goal is to be that voice to the world as well as an ear to its people.  My passion for story-telling started in high school and has grown even more as I have studied and worked as a reporter. I served a LDS mission in Paraguay and Argentina where I learned to speak Spanish fluently and developed a love for other cultures. I graduated  from BYU with a degree in Broadcast Journalism and Spanish. My long-term goal is to become an International Reporter.  Take a look at my portfolio below and don’t hesitate to contact me. I would love to tell you more about my personal story and how I plan to write it."
   };
 
   this.projects = [
